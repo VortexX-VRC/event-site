@@ -1,4 +1,4 @@
-export type Cast = {
+type Cast = {
   name: string,
   profile: string,
   quote: string,
