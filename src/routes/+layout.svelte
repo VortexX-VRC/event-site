@@ -42,7 +42,9 @@
     </NavigationMenu.Item>
   </NavigationMenu.List>
 </NavigationMenu.Root>
-{@render children()}
+<div>
+  {@render children()}
+</div>
 
 <style>
 .nav-logo img {
