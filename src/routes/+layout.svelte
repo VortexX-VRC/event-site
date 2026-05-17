@@ -13,7 +13,7 @@
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
 <ModeWatcher />
 <NavigationMenu.Root class="py-1 w-full max-w-full fixed bg-[url(/images/navbar.svg)] backdrop-blur-lg z-10">
-  <div class="nav-logo me-2"><enhanced:img src={logo} /></div>
+  <div class="nav-logo me-2"><enhanced:img src={logo} alt="logo" /></div>
   <NavigationMenu.List>
     <NavigationMenu.Item>
       <NavigationMenu.Link class={navHover}>

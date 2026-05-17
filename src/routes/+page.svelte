@@ -6,11 +6,11 @@
 </script>
 
 <div class="w-full h-screen bg-linear-to-b from-purple-500 to-black">
-  <enhanced:img src={logo} />
+  <enhanced:img src={logo} alt="Hero logo" />
 </div>
 <div id="story" class="flex place-content-center bg-fuchsia-900 h-dvh mask-radial-at-center mask-radial-from-30%">
-  <div class="self-center align-middle items-center text-2xl">
-    <h1 class="glitch layers font-bold my-4 text-6xl italic" data-text="STORY"><span>STORY</span></h1>
+  <div class="self-center align-middle items-center text-lg lg:text-2xl">
+    <h1 class="glitch layers font-bold my-4 text-4xl lg:text-6xl italic" data-text="STORY"><span>STORY</span></h1>
     <p class="mb-4 text-shadow-[0_10px_10px_rgb(0_0_0/0.5)]">
       次元の挟間に浮かぶ奇妙な店ーーその名もVortexX。<br/>
       其処は、時空の歪みに迷い込んだ者にしか辿り着けない幻の場所。
@@ -31,14 +31,18 @@
 <div id="info" class="flex place-content-center h-dvh">
   Info
 </div>
-<div id="members" class="flex place-content-center h-dvh">
-  {#each data.cast as cast (cast.name)}
-  <ul>
-    <li>
-      {cast.name}
-    </li>
-  </ul>
-  {/each}
+<div id="members" class="flex flex-col gap-2 place-content-center bg-fuchsia-900 h-dvh mask-radial-at-center mask-radial-from-30%">
+  <div class="self-center align-middle items-center text-lg lg:text-2xl">
+    <h1 class="glitch layers font-bold my-4 text-4xl lg:text-6xl italic" data-text="MEMBERS"><span>MEMBERS</span></h1>
+  </div>
+  <div class="flex gap-2 px-4">
+    {#each data.cast as cast (cast.name)}
+    <div class="w-48 h-80 backdrop-blur-lg bg-slate-600/50 drop-shadow-lg">
+      <p class="text-center p-2">{cast.name}</p>
+      <enhanced:img src={cast.image} alt={cast.name} />
+    </div>
+    {/each}
+  </div>
 </div>
 <div id="videos" class="flex place-content-center h-dvh">
   Videos
