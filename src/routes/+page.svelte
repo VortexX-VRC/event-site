@@ -1,6 +1,7 @@
 <script lang="ts">
   import logo from '$lib/assets/logo.webp';
   import './glitch.css';
+  import * as Card from '$lib/components/ui/card/index.js';
 
   let { data } = $props();
 </script>
@@ -37,10 +38,12 @@
   </div>
   <div class="flex gap-2 px-4">
     {#each data.cast as cast (cast.name)}
-    <div class="w-48 h-80 backdrop-blur-lg bg-slate-600/50 drop-shadow-lg">
-      <p class="text-center p-2">{cast.name}</p>
-      <enhanced:img src={cast.image} alt={cast.name} />
-    </div>
+    <Card.Root class="w-48 h-80 backdrop-blur-lg bg-slate-600/50 drop-shadow-lg">
+      <Card.Header><Card.Title>{cast.name}</Card.Title></Card.Header>
+      <Card.Content>
+        <enhanced:img src={cast.image} alt={cast.name} />
+      </Card.Content>
+    </Card.Root>
     {/each}
   </div>
 </div>

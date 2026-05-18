@@ -3,6 +3,7 @@
 	import favicon from '$lib/assets/favicon.svg';
 	import { ModeWatcher, setMode } from 'mode-watcher';
 	import * as NavigationMenu from '$lib/components/ui/navigation-menu/index.js';
+  import { Navigation } from '@skeletonlabs/skeleton-svelte';
 	import logo from '$lib/assets/logo.webp';
 
 	let { children } = $props();
