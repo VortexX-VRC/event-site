@@ -3,12 +3,11 @@
 	import favicon from '$lib/assets/favicon.svg';
 	import { ModeWatcher, setMode } from 'mode-watcher';
 	import * as NavigationMenu from '$lib/components/ui/navigation-menu/index.js';
-  import { Navigation } from '@skeletonlabs/skeleton-svelte';
 	import logo from '$lib/assets/logo.webp';
 
 	let { children } = $props();
 	setMode('dark');
-	const navHover = `w-36 justify-center transition bg-linear-to-b hover:from-fuchsia-500 hover:to-purple-800 hover:bg-fuchsia-800]`;
+	const navHover = `w-auto md:w-32 justify-center transition bg-linear-to-b hover:from-fuchsia-500 hover:to-purple-800 hover:bg-fuchsia-800]`;
 </script>
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>

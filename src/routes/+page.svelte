@@ -6,8 +6,8 @@
   let { data } = $props();
 </script>
 
-<div class="w-full h-screen bg-linear-to-b from-purple-500 to-black">
-  <enhanced:img src={logo} alt="Hero logo" />
+<div class="w-full h-screen place-content-center bg-linear-to-b from-purple-500 to-black">
+  <enhanced:img src={logo} alt="Hero logo" class="mx-auto" />
 </div>
 <div id="story" class="flex place-content-center bg-fuchsia-900 h-dvh mask-radial-at-center mask-radial-from-30%">
   <div class="self-center align-middle items-center text-lg lg:text-2xl">
@@ -38,8 +38,7 @@
   </div>
   <div class="flex gap-2 px-4">
     {#each data.cast as cast (cast.name)}
-    <Card.Root class="w-48 h-80 backdrop-blur-lg bg-slate-600/50 drop-shadow-lg">
-      <Card.Header><Card.Title>{cast.name}</Card.Title></Card.Header>
+    <Card.Root class="backdrop-blur-lg bg-slate-600/50 drop-shadow-lg rounded-md">
       <Card.Content>
         <enhanced:img src={cast.image} alt={cast.name} />
       </Card.Content>
