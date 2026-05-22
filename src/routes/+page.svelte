@@ -6,11 +6,12 @@
   let { data } = $props();
 </script>
 
-<div class="w-full h-screen place-content-center bg-linear-to-b from-purple-500 to-black">
+<div class="w-full h-dvh bg-linear-to-b from-purple-500 to-black fixed top-0 left-0 -z-50"></div>
+<div class="w-full h-screen place-content-center">
   <enhanced:img src={logo} alt="Hero logo" class="mx-auto" />
 </div>
-<div id="story" class="flex place-content-center bg-fuchsia-900 h-dvh mask-radial-at-center mask-radial-from-30%">
-  <div class="self-center align-middle items-center text-lg lg:text-2xl">
+<div id="story" class="flex place-content-center h-dvh text-2xl">
+  <div class="self-center align-middle items-center text-lg lg:text-2xl px-12">
     <h1 class="glitch layers font-bold my-4 text-4xl lg:text-6xl italic" data-text="STORY"><span>STORY</span></h1>
     <p class="mb-4 text-shadow-[0_10px_10px_rgb(0_0_0/0.5)]">
       次元の挟間に浮かぶ奇妙な店ーーその名もVortexX。<br/>
@@ -30,15 +31,39 @@
   </div>
 </div>
 <div id="info" class="flex place-content-center h-dvh">
-  Info
+  <div class="self-center align-middle items-center px-12">
+    <h1 class="glitch layers font-bold my-4 text-4xl lg:text-6xl italic" data-text="INFO"><span>INFO</span></h1>
+    <div class="grid gap-4 grid-cols-1 md:grid-cols-2">
+      <Card.Root class="backdrop-blur-lg bg-slate-600/30 drop-shadow-lg rounded-md">
+        <Card.Header class="text-xl text-slate-400">
+          開催日時
+        </Card.Header>
+        <Card.Content class="text-lg">
+          <p>第○・第○火曜日 22:30 ~ 24:00</p>
+          <p>リクイン開始 ○○:○○</p>
+          <p>リクイン先は&nbsp;<a href="https://x.com/VortexX_VRC" class="anchor">@VortexX_VRC</a>&nbsp;をご確認ください</p>
+        </Card.Content>
+      </Card.Root>
+      <Card.Root class="backdrop-blur-lg bg-slate-600/30 drop-shadow-lg rounded-md">
+        <Card.Header class="text-xl text-slate-400">
+          注意事項
+        </Card.Header>
+        <Card.Content class="text-lg">
+          <p>・メンバーに触れる行為やNSFWに該当する行為はご遠慮ください。</p>
+          <p>・営業の防げになる行為はご遠慮ください</p>
+          <p>※不適切な行為を確認した際には、再び時空の挟間へと放流させて頂きます。ご了承ください。</p>
+        </Card.Content>
+      </Card.Root>
+    </div>
+  </div>
 </div>
-<div id="members" class="flex flex-col gap-2 place-content-center bg-fuchsia-900 h-dvh mask-radial-at-center mask-radial-from-30%">
-  <div class="self-center align-middle items-center text-lg lg:text-2xl">
+<div id="members" class="flex flex-col gap-2 py-4 px-12 place-content-center min-h-dvh">
+  <div class="text-lg lg:text-2xl px-12">
     <h1 class="glitch layers font-bold my-4 text-4xl lg:text-6xl italic" data-text="MEMBERS"><span>MEMBERS</span></h1>
   </div>
-  <div class="flex gap-2 px-4">
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 px-12">
     {#each data.cast as cast (cast.name)}
-    <Card.Root class="backdrop-blur-lg bg-slate-600/50 drop-shadow-lg rounded-md">
+    <Card.Root class="backdrop-blur-lg bg-slate-600/50 drop-shadow-lg rounded-md max-w-72">
       <Card.Content>
         <enhanced:img src={cast.image} alt={cast.name} />
       </Card.Content>
@@ -47,8 +72,12 @@
   </div>
 </div>
 <div id="videos" class="flex place-content-center h-dvh">
-  Videos
+  <div class="text-lg lg:text-2xl px-12">
+    <h1 class="glitch layers font-bold my-4 text-4xl lg:text-6xl italic" data-text="VIDEOS"><span>VIDEOS</span></h1>
+  </div>
 </div>
 <div id="gallery" class="flex place-content-center h-dvh">
-  Gallery
+  <div class="text-lg lg:text-2xl px-12">
+    <h1 class="glitch layers font-bold my-4 text-4xl lg:text-6xl italic" data-text="GALLERY"><span>GALLERY</span></h1>
+  </div>
 </div>
