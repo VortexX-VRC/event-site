@@ -1,12 +1,12 @@
-import c13l from '$lib/assets/c-13l.webp';
-import iovesta from '$lib/assets/iovesta.webp';
-import leticia from '$lib/assets/leticia.webp';
-import neon from '$lib/assets/neon.webp';
-import oyassan from '$lib/assets/oyassan.webp';
-import sol from '$lib/assets/sol.webp';
-import stella from '$lib/assets/stella.webp';
-import sylphid from '$lib/assets/sylphid.webp';
-import theseus from '$lib/assets/theseus.webp';
+import c13l from '$lib/assets/members/c-13l.webp';
+import iovesta from '$lib/assets/members/iovesta.webp';
+import leticia from '$lib/assets/members/leticia.webp';
+import neon from '$lib/assets/members/neon.webp';
+import oyassan from '$lib/assets/members/oyassan.webp';
+import sol from '$lib/assets/members/sol.webp';
+import stella from '$lib/assets/members/stella.webp';
+import sylphid from '$lib/assets/members/sylphid.webp';
+import theseus from '$lib/assets/members/theseus.webp';
 
 type Cast = {
   name: string,

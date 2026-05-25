@@ -2,6 +2,7 @@
   import logo from '$lib/assets/logo.webp';
   import './glitch.css';
   import * as Card from '$lib/components/ui/card/index.js';
+  import * as Carousel from "$lib/components/ui/carousel/index.js";
 
   let { data } = $props();
 </script>
@@ -76,8 +77,21 @@
     <h1 class="glitch layers font-bold my-4 text-4xl lg:text-6xl italic" data-text="VIDEOS"><span>VIDEOS</span></h1>
   </div>
 </div>
-<div id="gallery" class="flex place-content-center h-dvh">
-  <div class="text-lg lg:text-2xl px-12">
+<div id="gallery" class="flex flex-col place-content-center h-dvh px-12">
+  <div class="text-lg lg:text-2xl">
     <h1 class="glitch layers font-bold my-4 text-4xl lg:text-6xl italic" data-text="GALLERY"><span>GALLERY</span></h1>
   </div>
+  <Carousel.Root>
+    <Carousel.Content>
+      {#each data.gallery as item (item.image)}
+        <Carousel.Item>
+          <div class="p-2 max-w-fit">
+            <enhanced:img src={item.image} alt={item.caption} class="w-1/2" />
+          </div>
+        </Carousel.Item>
+      {/each}
+    </Carousel.Content>
+    <Carousel.Previous />
+    <Carousel.Next />
+  </Carousel.Root>
 </div>
