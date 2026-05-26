@@ -30,11 +30,11 @@
         <a href="#members">メンバー</a>
       </NavigationMenu.Link>
     </NavigationMenu.Item>
-    <NavigationMenu.Item>
+    <!-- <NavigationMenu.Item>
       <NavigationMenu.Link class={navHover}>
         <a href="#videos">動画</a>
       </NavigationMenu.Link>
-    </NavigationMenu.Item>
+    </NavigationMenu.Item> -->
     <NavigationMenu.Item>
       <NavigationMenu.Link class={navHover}>
         <a href="#gallery">ギャラリー</a>
