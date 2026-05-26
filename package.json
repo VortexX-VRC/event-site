@@ -18,8 +18,11 @@
 		"@fontsource-variable/inter": "^5.2.8",
 		"@internationalized/date": "^3.12.1",
 		"@lucide/svelte": "^1.14.0",
+		"@skeletonlabs/skeleton": "^4.15.2",
+		"@skeletonlabs/skeleton-svelte": "^4.15.2",
 		"@sveltejs/adapter-auto": "^7.0.1",
 		"@sveltejs/adapter-static": "^3.0.10",
+		"@sveltejs/enhanced-img": "^0.10.4",
 		"@sveltejs/kit": "^2.59.1",
 		"@sveltejs/vite-plugin-svelte": "^7.1.2",
 		"@tailwindcss/vite": "^4.3.0",
@@ -40,5 +43,9 @@
 		"typescript": "^6.0.2",
 		"typescript-eslint": "^8.58.1",
 		"vite": "^8.0.12"
-	}
+	},
+	"dependencies": {
+		"mode-watcher": "^1.1.0"
+	},
+	"packageManager": "pnpm@11.1.2+sha512.415a1cc25974731e75455c1468371be74c5aa5fb7621b50d4056d222451609f11412f23fd602e6169f1e060466641f798597e1be961a10688836a67b16569499"
 }
