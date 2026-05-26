@@ -42,7 +42,7 @@
     </NavigationMenu.Item>
   </NavigationMenu.List>
 </NavigationMenu.Root>
-<div>
+<div class="flex flex-col gap-4">
   {@render children()}
 </div>
 

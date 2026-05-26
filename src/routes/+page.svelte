@@ -12,7 +12,7 @@
   <enhanced:img src={logo} alt="Hero logo" class="mx-auto" />
 </div>
 <div id="story" class="flex place-content-center h-dvh text-2xl">
-  <div class="self-center align-middle items-center text-lg lg:text-2xl px-12">
+  <div class="self-center align-middle items-center text-lg md:text-xl lg:text-2xl px-12">
     <h1 class="glitch layers font-bold my-4 text-4xl lg:text-6xl italic" data-text="STORY"><span>STORY</span></h1>
     <p class="mb-4 text-shadow-[0_10px_10px_rgb(0_0_0/0.5)]">
       次元の挟間に浮かぶ奇妙な店ーーその名もVortexX。<br/>
@@ -35,7 +35,7 @@
   <div class="self-center align-middle items-center px-12">
     <h1 class="glitch layers font-bold my-4 text-4xl lg:text-6xl italic" data-text="INFO"><span>INFO</span></h1>
     <div class="grid gap-4 grid-cols-1 md:grid-cols-2">
-      <Card.Root class="backdrop-blur-lg bg-slate-600/30 drop-shadow-lg rounded-md">
+      <Card.Root class="glass drop-shadow-lg">
         <Card.Header class="text-xl text-slate-400">
           開催日時
         </Card.Header>
@@ -45,7 +45,7 @@
           <p>リクイン先は&nbsp;<a href="https://x.com/VortexX_VRC" class="anchor">@VortexX_VRC</a>&nbsp;をご確認ください</p>
         </Card.Content>
       </Card.Root>
-      <Card.Root class="backdrop-blur-lg bg-slate-600/30 drop-shadow-lg rounded-md">
+      <Card.Root class="glass drop-shadow-lg">
         <Card.Header class="text-xl text-slate-400">
           注意事項
         </Card.Header>
@@ -64,7 +64,7 @@
   </div>
   <div class="grid grid-cols-2 md:grid-cols-4 gap-4 px-12">
     {#each data.cast as cast (cast.name)}
-    <Card.Root class="backdrop-blur-lg bg-slate-600/50 drop-shadow-lg rounded-md max-w-72">
+    <Card.Root class="glass drop-shadow-lg rounded-md max-w-72">
       <Card.Content>
         <enhanced:img src={cast.image} alt={cast.name} />
       </Card.Content>
@@ -72,12 +72,12 @@
     {/each}
   </div>
 </div>
-<div id="videos" class="flex place-content-center h-dvh">
+<!-- <div id="videos" class="flex place-content-center h-dvh">
   <div class="text-lg lg:text-2xl px-12">
     <h1 class="glitch layers font-bold my-4 text-4xl lg:text-6xl italic" data-text="VIDEOS"><span>VIDEOS</span></h1>
   </div>
-</div>
-<div id="gallery" class="flex flex-col place-content-center h-dvh px-12">
+</div> -->
+<div id="gallery" class="flex flex-col place-content-center min-h-dvh px-12">
   <div class="text-lg lg:text-2xl">
     <h1 class="glitch layers font-bold my-4 text-4xl lg:text-6xl italic" data-text="GALLERY"><span>GALLERY</span></h1>
   </div>
@@ -85,9 +85,11 @@
     <Carousel.Content>
       {#each data.gallery as item (item.image)}
         <Carousel.Item>
-          <div class="p-2 max-w-fit">
-            <enhanced:img src={item.image} alt={item.caption} class="w-1/2" />
-          </div>
+          <Card.Root class="glass p-4">
+            <Card.Content class="flex aspect-square items-center justify-center p-6">
+              <enhanced:img src={item.image} alt={item.caption} class="max-h-dvh" />
+            </Card.Content>
+          </Card.Root>
         </Carousel.Item>
       {/each}
     </Carousel.Content>
