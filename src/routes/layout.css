@@ -132,8 +132,9 @@
 }
 
 @font-face {
-	font-family: "Kaisotai";
-	src: url("/fonts/Kaisotai-Next-UP-B.woff2") format("woff2");
+	font-family: Kaisotai;
+	src: url("/event-site/fonts/Kaisotai-Next-UP-B.woff2") format("woff2"),
+		 url("/fonts/Kaisotai-Next-UP-B.woff2") format("woff2");
 }
 
 html {

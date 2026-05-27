@@ -4,15 +4,17 @@
 	import { ModeWatcher, setMode } from 'mode-watcher';
 	import * as NavigationMenu from '$lib/components/ui/navigation-menu/index.js';
 	import logo from '$lib/assets/logo.webp';
+  import { asset } from '$app/paths';
 
 	let { children } = $props();
 	setMode('dark');
 	const navHover = `w-auto md:w-32 justify-center transition bg-linear-to-b hover:from-fuchsia-500 hover:to-purple-800 hover:bg-fuchsia-800]`;
+  const navbarUrl = asset(`/images/navbar.svg`);
 </script>
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
 <ModeWatcher />
-<NavigationMenu.Root class="py-1 w-full max-w-full fixed bg-[url(/images/navbar.svg)] backdrop-blur-md z-10">
+<NavigationMenu.Root class={`py-1 w-full max-w-full fixed bg-[url(${navbarUrl})] backdrop-blur-md z-10`}>
   <div class="nav-logo me-2"><enhanced:img src={logo} alt="logo" /></div>
   <NavigationMenu.List class="text-xl">
     <NavigationMenu.Item>
@@ -42,7 +44,7 @@
     </NavigationMenu.Item>
   </NavigationMenu.List>
 </NavigationMenu.Root>
-<div class="flex flex-col gap-4">
+<div class="flex flex-col gap-4 font-[Kaisotai]">
   {@render children()}
 </div>
 

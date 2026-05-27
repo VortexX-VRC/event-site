@@ -4,7 +4,7 @@
   import * as Card from '$lib/components/ui/card/index.js';
   import * as Carousel from "$lib/components/ui/carousel/index.js";
 
-  let { data } = $props();
+  let { data = { cast: [], gallery: [] } } = $props();
 </script>
 
 <div class="w-full h-dvh bg-linear-to-b from-purple-500 to-black fixed top-0 left-0 -z-50"></div>
