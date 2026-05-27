@@ -4,12 +4,11 @@
 	import { ModeWatcher, setMode } from 'mode-watcher';
 	import * as NavigationMenu from '$lib/components/ui/navigation-menu/index.js';
 	import logo from '$lib/assets/logo.webp';
-  import { asset } from '$app/paths';
 
 	let { children } = $props();
 	setMode('dark');
 	const navHover = `w-auto md:w-32 justify-center transition bg-linear-to-b hover:from-fuchsia-500 hover:to-purple-800 hover:bg-fuchsia-800]`;
-  const navbarUrl = asset(`$img/navbar.svg`);
+  const navbarUrl = `$img/navbar.svg`;
 </script>
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
