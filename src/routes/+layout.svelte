@@ -1,7 +1,6 @@
 <script lang="ts">
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
-	import { ModeWatcher } from 'mode-watcher';
 	import * as NavigationMenu from '$lib/components/ui/navigation-menu/index.js';
 	import logo from '$lib/assets/logo.webp';
 
@@ -10,7 +9,6 @@
 </script>
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
-<ModeWatcher defaultMode="dark" track={false} />
 <NavigationMenu.Root class="py-1 w-full max-w-full fixed bg-linear-to-b/oklch from-(--navbar-colour) to-black/0 backdrop-blur-md z-10">
   <div class="nav-logo me-2"><enhanced:img src={logo} alt="logo" /></div>
   <NavigationMenu.List class="text-xl place-content-center">
