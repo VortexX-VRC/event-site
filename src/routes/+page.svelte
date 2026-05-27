@@ -3,8 +3,8 @@
   import './glitch.css';
   import * as Card from '$lib/components/ui/card/index.js';
   import * as Carousel from "$lib/components/ui/carousel/index.js";
-
-  let { data = { cast: [], gallery: [] } } = $props();
+  import { cast } from '$lib/cast';
+  import { gallery } from '$lib/gallery';
 </script>
 
 <div class="w-full h-dvh bg-linear-to-b from-purple-500 to-black fixed top-0 left-0 -z-50"></div>
@@ -63,10 +63,10 @@
     <h1 class="glitch layers font-bold my-4 text-4xl lg:text-6xl italic" data-text="MEMBERS"><span>MEMBERS</span></h1>
   </div>
   <div class="grid grid-cols-2 md:grid-cols-4 gap-4 px-12">
-    {#each data.cast as cast (cast.name)}
+    {#each cast as member (member.name)}
     <Card.Root class="glass drop-shadow-lg rounded-md max-w-72">
       <Card.Content>
-        <enhanced:img src={cast.image} alt={cast.name} />
+        <enhanced:img src={member.image} alt={member.name} />
       </Card.Content>
     </Card.Root>
     {/each}
@@ -83,7 +83,7 @@
   </div>
   <Carousel.Root>
     <Carousel.Content>
-      {#each data.gallery as item (item.image)}
+      {#each gallery as item (item.image)}
         <Carousel.Item>
           <Card.Root class="glass p-4">
             <Card.Content class="flex aspect-square items-center justify-center p-6">
