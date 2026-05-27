@@ -8,12 +8,11 @@
 	let { children } = $props();
 	setMode('dark');
 	const navHover = `w-auto md:w-32 justify-center transition bg-linear-to-b hover:from-fuchsia-500 hover:to-purple-800 hover:bg-fuchsia-800]`;
-  const navbarUrl = `$img/navbar.svg`;
 </script>
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
 <ModeWatcher />
-<NavigationMenu.Root class={`py-1 w-full max-w-full fixed bg-[url(${navbarUrl})] backdrop-blur-md z-10`}>
+<NavigationMenu.Root class="py-1 w-full max-w-full fixed bg-linear-to-b/oklch from-[#1e2939] to-black/0 backdrop-blur-md z-10">
   <div class="nav-logo me-2"><enhanced:img src={logo} alt="logo" /></div>
   <NavigationMenu.List class="text-xl">
     <NavigationMenu.Item>
