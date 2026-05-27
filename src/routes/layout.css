@@ -135,6 +135,11 @@
 	font-family: Kaisotai;
 	src: url("/event-site/fonts/Kaisotai-Next-UP-B.woff2") format("woff2"),
 		 url("/fonts/Kaisotai-Next-UP-B.woff2") format("woff2");
+	font-display: swap;
+}
+
+:root {
+	--navbar-colour: oklch(27.8% 0.033 256.848);
 }
 
 html {

@@ -1,43 +1,42 @@
 <script lang="ts">
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
-	import { ModeWatcher, setMode } from 'mode-watcher';
+	import { ModeWatcher } from 'mode-watcher';
 	import * as NavigationMenu from '$lib/components/ui/navigation-menu/index.js';
 	import logo from '$lib/assets/logo.webp';
 
 	let { children } = $props();
-	setMode('dark');
 	const navHover = `w-auto md:w-32 justify-center transition bg-linear-to-b hover:from-fuchsia-500 hover:to-purple-800 hover:bg-fuchsia-800]`;
 </script>
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
-<ModeWatcher />
-<NavigationMenu.Root class="py-1 w-full max-w-full fixed bg-linear-to-b/oklch from-[#1e2939] to-black/0 backdrop-blur-md z-10">
+<ModeWatcher defaultMode="dark" track={false} />
+<NavigationMenu.Root class="py-1 w-full max-w-full fixed bg-linear-to-b/oklch from-(--navbar-colour) to-black/0 backdrop-blur-md z-10">
   <div class="nav-logo me-2"><enhanced:img src={logo} alt="logo" /></div>
-  <NavigationMenu.List class="text-xl">
+  <NavigationMenu.List class="text-xl place-content-center">
     <NavigationMenu.Item>
-      <NavigationMenu.Link class={navHover}>
-        <a href="#story">ストーリ</a>
+      <NavigationMenu.Link href="#story" class={navHover}>
+        ストーリ
       </NavigationMenu.Link>
     </NavigationMenu.Item>
     <NavigationMenu.Item>
-      <NavigationMenu.Link class={navHover}>
-        <a href="#info">イベント情報</a>
+      <NavigationMenu.Link href="#info" class={navHover}>
+        イベント情報
       </NavigationMenu.Link>
     </NavigationMenu.Item>
     <NavigationMenu.Item>
-      <NavigationMenu.Link class={navHover}>
-        <a href="#members">メンバー</a>
+      <NavigationMenu.Link href="#members" class={navHover}>
+        メンバー
       </NavigationMenu.Link>
     </NavigationMenu.Item>
     <!-- <NavigationMenu.Item>
-      <NavigationMenu.Link class={navHover}>
-        <a href="#videos">動画</a>
+      <NavigationMenu.Link href="#videos" class={navHover}>
+        動画
       </NavigationMenu.Link>
     </NavigationMenu.Item> -->
     <NavigationMenu.Item>
-      <NavigationMenu.Link class={navHover}>
-        <a href="#gallery">ギャラリー</a>
+      <NavigationMenu.Link href="#gallery" class={navHover}>
+        ギャラリー
       </NavigationMenu.Link>
     </NavigationMenu.Item>
   </NavigationMenu.List>
