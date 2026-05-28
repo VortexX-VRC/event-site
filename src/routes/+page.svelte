@@ -9,7 +9,7 @@
 
 <div class="w-full h-dvh bg-linear-to-b from-purple-500 to-black fixed -z-50"></div>
 <div class="w-full h-dvh place-content-center">
-  <enhanced:img src={logo} alt="Hero logo" class="mx-auto" />
+  <img src={logo} alt="Hero logo" class="mx-auto" />
 </div>
 <div id="story" class="flex place-content-center h-dvh text-2xl">
   <div class="self-center align-middle items-center text-lg md:text-xl lg:text-2xl px-12">
@@ -66,7 +66,7 @@
     {#each cast as member (member.name)}
     <Card.Root class="glass drop-shadow-lg rounded-md max-w-72">
       <Card.Content>
-        <enhanced:img src={member.image} alt={member.name} />
+        <img src={member.image} alt={member.name} />
       </Card.Content>
     </Card.Root>
     {/each}
@@ -96,7 +96,7 @@
           <Carousel.Item index={i} snapAlign="center">
             <Card.Root class="glass p-4 w-3/4 mx-auto self-center">
               <Card.Content class="flex aspect-square items-center justify-center p-6">
-                <enhanced:img src={item.image} alt={item.caption} class="max-h-dvh" />
+                <img src={item.image} alt={item.caption} class="max-h-dvh" />
               </Card.Content>
             </Card.Root>
           </Carousel.Item>

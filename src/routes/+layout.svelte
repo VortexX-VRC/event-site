@@ -10,7 +10,7 @@
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
 <NavigationMenu.Root class="py-1 w-full max-w-full overflow-x-hidden fixed bg-linear-to-b/oklch from-(--navbar-colour) to-black/0 backdrop-blur-md z-10">
-  <div class="nav-logo me-2"><enhanced:img src={logo} alt="logo" /></div>
+  <div class="nav-logo me-2"><img src={logo} alt="logo" /></div>
   <NavigationMenu.List class="text-xl place-content-center">
     <NavigationMenu.Item>
       <NavigationMenu.Link href="#story" class={navHover}>
